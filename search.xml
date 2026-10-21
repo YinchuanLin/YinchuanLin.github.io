@@ -57,4 +57,13 @@
         <tag>主题日记</tag>
       </tags>
   </entry>
+  <entry>
+    <title>机器人开发日志</title>
+    <url>/2026/10/21/robot-devlog/</url>
+    <content><![CDATA[<p>记录机器人开发过程中的问题、方案和收获。</p>
+]]></content>
+      <categories>
+        <category>开发日志</category>
+      </categories>
+  </entry>
 </search>
