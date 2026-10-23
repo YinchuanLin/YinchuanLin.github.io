@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>开发日志开篇</title>
-    <url>/2026/10/20/devlog-start/</url>
-    <content><![CDATA[<p>记录建站与开发过程中的问题、方案和收获。</p>
-]]></content>
-      <categories>
-        <category>开发日志</category>
-      </categories>
-  </entry>
-  <entry>
     <title>长篇日记—“军旅”生涯—2026/10/08—2026/10/21</title>
     <url>/2026/10/21/long-diary-military-training/</url>
     <content><![CDATA[<p>大学开学也有一个来月了，前半个月其实没啥好说的好像，就正常开学，老师给我们上了开学第一课。</p>
@@ -56,15 +47,6 @@
         <tag>长篇日记</tag>
         <tag>主题日记</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>机器人开发日志</title>
-    <url>/2026/10/21/robot-devlog/</url>
-    <content><![CDATA[<p>记录机器人开发过程中的问题、方案和收获。</p>
-]]></content>
-      <categories>
-        <category>开发日志</category>
-      </categories>
   </entry>
   <entry>
     <title>开发日志—机器人前言—2026/10/23</title>
