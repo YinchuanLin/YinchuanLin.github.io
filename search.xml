@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>开发日志—机器人01—2026/10/24</title>
+    <url>/2026/10/24/devlog-robot-01/</url>
+    <content><![CDATA[<p>基于自身实力和科研成本的综合考量，我决定我们的机器人为四足类蜘蛛的爬行机器人，首先我先我想先使用blender建模一个蜘蛛机器人，为后续的研发定下一个大概的方向。</p>
+<p>过程很顺利，在DSH的辅助下，耗时约2个小时完成基本的建模工作，虽然这不一定是最后成品的外观，但是已经将模糊的目标变为清晰概念。</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/images/2026/robot-devlog/01-model-view-1.jpeg"  alt="蜘蛛机器人在 Blender 中的建模视图（1）"></p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/images/2026/robot-devlog/02-model-view-2.jpeg"  alt="蜘蛛机器人在 Blender 中的建模视图（2）"></p>
+<p>在blender的渲染下，我们可以进一步的看到机器人的外观。</p>
+<p>好了，那下一步我打算开始进行需求分析了，就放到下一章再来讲。</p>
+]]></content>
+      <categories>
+        <category>开发日志</category>
+      </categories>
+      <tags>
+        <tag>机器人</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>开发日志—机器人前言—2026/10/23</title>
+    <url>/2026/10/23/devlog-robot-preface/</url>
+    <content><![CDATA[<p>说实话，学了那么多东西了，还没自己上手实操一个项目，感觉还是不太ok，虽说高中的时候有参与过水下无人系统的设计，但是在团队中还是以辅助为主，所以这次我要一个人尝试看看能不能完成一个项目。</p>
+<p>首先，我在GitHub上调查了一下，其实已经有很多很成熟的四足、六足机器人，并且都以实现了很多功能，但是造价也是相当的昂贵。</p>
+<p>所以，这次的项目我打算先以简单的任务为主，以项目的成功落地为主。</p>
+<p>在功能方面，我希望能够实现基础的前进、后退以及转向，并且我希望能够使用移动设备对其控制。在完成基础的功能后，我希望机器人还留有继续升级的空间，方便后续升级。</p>
+<p>至此，我认为项目前期工作也完成，接下来开始正式进行项目。</p>
+]]></content>
+      <categories>
+        <category>开发日志</category>
+      </categories>
+      <tags>
+        <tag>机器人</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>长篇日记—“军旅”生涯—2026/10/08—2026/10/21</title>
     <url>/2026/10/21/long-diary-military-training/</url>
     <content><![CDATA[<p>大学开学也有一个来月了，前半个月其实没啥好说的好像，就正常开学，老师给我们上了开学第一课。</p>
@@ -46,39 +79,6 @@
       <tags>
         <tag>长篇日记</tag>
         <tag>主题日记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>开发日志—机器人前言—2026/10/23</title>
-    <url>/2026/10/23/devlog-robot-preface/</url>
-    <content><![CDATA[<p>说实话，学了那么多东西了，还没自己上手实操一个项目，感觉还是不太ok，虽说高中的时候有参与过水下无人系统的设计，但是在团队中还是以辅助为主，所以这次我要一个人尝试看看能不能完成一个项目。</p>
-<p>首先，我在GitHub上调查了一下，其实已经有很多很成熟的四足、六足机器人，并且都以实现了很多功能，但是造价也是相当的昂贵。</p>
-<p>所以，这次的项目我打算先以简单的任务为主，以项目的成功落地为主。</p>
-<p>在功能方面，我希望能够实现基础的前进、后退以及转向，并且我希望能够使用移动设备对其控制。在完成基础的功能后，我希望机器人还留有继续升级的空间，方便后续升级。</p>
-<p>至此，我认为项目前期工作也完成，接下来开始正式进行项目。</p>
-]]></content>
-      <categories>
-        <category>开发日志</category>
-      </categories>
-      <tags>
-        <tag>机器人</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>开发日志—机器人01—2026/10/24</title>
-    <url>/2026/10/24/devlog-robot-01/</url>
-    <content><![CDATA[<p>基于自身实力和科研成本的综合考量，我决定我们的机器人为四足类蜘蛛的爬行机器人，首先我先我想先使用blender建模一个蜘蛛机器人，为后续的研发定下一个大概的方向。</p>
-<p>过程很顺利，在DSH的辅助下，耗时约2个小时完成基本的建模工作，虽然这不一定是最后成品的外观，但是已经将模糊的目标变为清晰概念。</p>
-<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/images/2026/robot-devlog/01-model-view-1.jpeg"  alt="蜘蛛机器人在 Blender 中的建模视图（1）"></p>
-<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/images/2026/robot-devlog/02-model-view-2.jpeg"  alt="蜘蛛机器人在 Blender 中的建模视图（2）"></p>
-<p>在blender的渲染下，我们可以进一步的看到机器人的外观。</p>
-<p>好了，那下一步我打算开始进行需求分析了，就放到下一章再来讲。</p>
-]]></content>
-      <categories>
-        <category>开发日志</category>
-      </categories>
-      <tags>
-        <tag>机器人</tag>
       </tags>
   </entry>
 </search>
