@@ -1,0 +1,128 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="Lin"/><meta name="copyright" content="Lin"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="机器人"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="开发日志—机器人02—2026/11/10 | 鹿角巷1017号街口"/><meta name="apple-mobile-web-app-title" content="开发日志—机器人02—2026/11/10 | 鹿角巷1017号街口"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://lin.jx.cn/2026/11/10/devlog-robot-02/"/><meta name="description" content="（ps：这次的开发日志距离上一篇已经隔了快一个月，想必已经有所进展了吧。实在不然，进度真的缓慢。） 那我们就由主到次来记录一下进度吧。 首先，我们根据我们的需求选择了ESP32-S3核心开发板。简单说一下为什么选择这款开发板： 1.ESP32这款芯片可以做到“画小钱，办大事“，ESP32自带无线连接能力，对比STM32得外挂ESP8266&#x2F;ESP-AT或4G模组才能实现无线连接能力...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发日志—机器人02—2026&#x2F;11&#x2F;10 | 鹿角巷1017号街口">
+<meta property="og:url" content="https://lin.jx.cn/2026/11/10/devlog-robot-02/index.html">
+<meta property="og:site_name" content="鹿角巷1017号街口">
+<meta property="og:description" content="（ps：这次的开发日志距离上一篇已经隔了快一个月，想必已经有所进展了吧。实在不然，进度真的缓慢。） 那我们就由主到次来记录一下进度吧。 首先，我们根据我们的需求选择了ESP32-S3核心开发板。简单说一下为什么选择这款开发板： 1.ESP32这款芯片可以做到“画小钱，办大事“，ESP32自带无线连接能力，对比STM32得外挂ESP8266&#x2F;ESP-AT或4G模组才能实现无线连接能力...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lin.jx.cn/2026/11/10/devlog-robot-02/assets/images/Hexo-Theme-MEOW.png">
+<meta property="article:published_time" content="2026-11-10T15:46:00.000Z">
+<meta property="article:modified_time" content="2026-11-10T15:46:44.620Z">
+<meta property="article:author" content="Lin">
+<meta property="article:tag" content="机器人">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://lin.jx.cn/2026/11/10/devlog-robot-02/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>开发日志—机器人02—2026/11/10 | 鹿角巷1017号街口</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
+<link rel="stylesheet" href="/css/style.css?v=20261020-1">
+<link rel="prefetch" href="/"/><link rel="prefetch" href="/archives"/><link rel="prefetch" href="/tags"/><meta name="generator" content="Hexo 8.1.2"></head><body bg-style="none"><div class="post-progressbar-container"><div class="post-progressbar"></div></div><header><div id="navbar"><div id="nav-info"><a id="site-icon" href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a id="site-name" href="/" title="主页"><div>鹿角巷1017号街口</div><img src="/assets/images/svg/uc/uc-home.svg" class="icon noview" alt="Icon"></a></div><div id="nav-menu"><div class="menu-item"><a href="/archives/"><img src="/assets/images/svg/uc/uc-article.svg" class="icon noview" alt="Icon"><span>文章</span></a></div><div class="menu-item"><a href="/categories/"><img src="/assets/images/svg/uc/uc-category.svg" class="icon noview" alt="Icon"><span>分类</span></a></div><div class="menu-item"><a href="/tags/"><img src="/assets/images/svg/uc/uc-tag.svg" class="icon noview" alt="Icon"><span>标签</span></a></div><div class="menu-item"><a href="/about/"><img src="/assets/images/svg/uc/uc-about.svg" class="icon noview" alt="Icon"><span>关于</span></a></div></div><div id="nav-function"><div id="search-btn"><a href="javascript:void(0);" title="搜索" accesskey="s"><img src="/assets/images/svg/uc/uc-search.svg" class="icon noview" alt="Icon"><span>搜索</span></a></div><div id="menu-btn"><a href="javascript:void(0);" title="打开菜单"><img src="/assets/images/svg/uc/uc-menu.svg" class="icon noview" alt="Icon"></a></div></div></div></header><div id="menu-aside"><div id="menu-aside-container"><div id="menu-aside-info"><a href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a href="/" title="主页">鹿角巷1017号街口</a></div><div class="menu-aside-item"><a href="/archives/"><img src="/assets/images/svg/uc/uc-article.svg" class="icon noview" alt="Icon"><span>文章</span></a></div><div class="menu-aside-item"><a href="/categories/"><img src="/assets/images/svg/uc/uc-category.svg" class="icon noview" alt="Icon"><span>分类</span></a></div><div class="menu-aside-item"><a href="/tags/"><img src="/assets/images/svg/uc/uc-tag.svg" class="icon noview" alt="Icon"><span>标签</span></a></div><div class="menu-aside-item"><a href="/about/"><img src="/assets/images/svg/uc/uc-about.svg" class="icon noview" alt="Icon"><span>关于</span></a></div><hr/></div></div><main><div class="banner"><div class="banner-info"><div class="banner-avatar"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Avatar"/></div><div class="banner-title">鹿角巷1017号街口</div></div></div><div class="post-container"><div class="post-main"><div class="post-content"><h1 class="post-title">开发日志—机器人02—2026/11/10</h1><div class="post-author"><span>作者: Lin</span></div><div class="post-meta"><div class="post-info"><div class="post-date"><div class="post-pubdate"><img src="/assets/images/svg/ta/ta-pubdate.svg" class="icon noview" alt="Icon"><span>发表于2026-11-10</span></div><div class="post-update"><img src="/assets/images/svg/ta/ta-update.svg" class="icon noview" alt="Icon"><span>更新于2026-11-10</span></div></div><div class="post-read"></div></div><div class="post-attribute"><div class="post-categories"><img src="/assets/images/svg/ta/ta-category.svg" class="icon noview" alt="Icon"><span><a class="post-categories-link" href="/categories/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/">开发日志</a></span></div><div class="post-tags"><img src="/assets/images/svg/ta/ta-tag.svg" class="icon noview" alt="Icon"><span><a class="post-tags-link" href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">机器人</a></span></div></div></div><div class="post markdown" indent="false"><p>（ps：这次的开发日志距离上一篇已经隔了快一个月，想必已经有所进展了吧。实在不然，进度真的缓慢。）</p>
+<p>那我们就由主到次来记录一下进度吧。</p>
+<p>首先，我们根据我们的需求选择了ESP32-S3核心开发板。简单说一下为什么选择这款开发板：</p>
+<p>1.ESP32这款芯片可以做到“画小钱，办大事“，ESP32自带无线连接能力，对比STM32得外挂ESP8266&#x2F;ESP-AT或4G模组才能实现无线连接能力。</p>
+<p>2.双核 Xtensa LX6&#x2F;LX7 @240MHz、520KB SRAM、外挂4~16MB Flash和PSRAM，可以跑FreeRTOS 多任务、TLS 加密、MQTT、HTTP 服务器、音频解码。Arduino Uno 的 2KB RAM 连个 JSON 都拼不下，STM32F103 联网也要精打细算。</p>
+<p>3.DC&#x2F;DAC、I2C、SPI、I2S（音频）、CAN&#x2F;TWAI、RMT（红外&#x2F;WS2812）、触摸、霍尔、SDIO、摄像头接口、以太网 MAC。S3还多出原生USB OTG + USB Serial&#x2F;JTAG、向量指令加速神经网络。</p>
+<p>（ps：水一下文本长度，感觉没啥可以写的(～￣▽￣)～），</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/images/2026/robot-devlog/01-esp32-s3-board.jpeg"  alt="买到的 ESP32-S3 核心开发板成品"></p>
+<p>（这个是我买的ESP32-S3的成品板）</p>
+<p>下一个就是PCA9685舵机控制板，作为最省事、最稳、最便宜的选择，我也是毫不犹豫的拿下了。</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/images/2026/robot-devlog/02-pca9685-board.jpeg"  alt="买到的 PCA9685 舵机控制板成品"></p>
+<p>（这个是我买的PCA9685舵机控制板成品，买成品在时间和金钱上都比自己设计和焊接要简单一些&#x3D;D）</p>
+<p>然后就是电池了，电池我买的格氏的“航空级”（其实就是航模用的）800mAh，2s，45c的电池，这个电池我感觉可能并不够用，毕竟就这点容量要带18的舵机，可能就运行不到10分钟。然后配套的就是UBEC稳压模块。</p>
+<p>害，说实话，目前来说绝大部分的内容都是DSH给我的教程，在它面前，感觉我才是那个harness，它负责下达命令，我负责执行操作，我本来的想法是想通过自己做一个简单的小项目，然后做实操的过程中慢慢学习嵌入式开发的相关知识，但是感觉自己现在有点本末倒置了，功利心有点太重了，想马上做点小成果出来，这无疑是错误的。所有我现在打算放慢一下进度了，还是要先有一定的理论基础。</p>
+<p>（有这些感悟还是因为在研究PCA9685接线的时侯，虽然DSH告诉了我要怎么接，但我其实并不知道为什么要这么接，就比如那个PCA9685上的SCL和SDA串口，我都不知道这两个串口是干啥的，后面查了才知道是I2C通信协议的串口，还有就是想为啥要接GPIO8，不能接GPIO1234567呢，虽然我现在就感觉这个问题很sb但我确实是不知道。）</p>
+<p>还有一点，也是为什么进度这么慢的重要原因之一，就是每次做到一般的时候发现少这少那的，就比如那个UBEC和电池之间的接口，这个DSH告诉我电池要买XT30的头的，结果UBEC的input端的头是JST的，如果我要是具备一些接口相关的知识，那我应该就不会在要接电池的时候发现接不上，然后又去买转接线，等个几天。线到了之后，我以为应该不会再缺东西了（虽然前面每次买完东西都这样想），结果还是缺了，这次又是再在UBEC连接PCA9685是发现舵机板的电源接线端子要用非常小的一字螺丝刀拧，显然，我是没有的（在我写这篇的时候，我的一字螺丝刀还在烟台，要到大后天才能到）。</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/images/2026/robot-devlog/03-connector.jpeg"  alt="问豆包这个是什么接口时拍的照片"></p>
+<p>（当时拍给豆包看的图，问豆包这个是啥接口）</p>
+<p>好了，这次的开发日志就简单说到这里，代码方面的进展可以说是几乎没有，因为现在硬件方面还是状况频出。</p>
+</div><div class="post-copyright"><div class="post-copyright-info">本作品由 Lin 于 2026-11-10 23:46:00 发布</div><div class="post-copyright-link"><span>作品地址：<a href="https://lin.jx.cn/2026/11/10/devlog-robot-02/">开发日志—机器人02—2026/11/10</a></span><button class="copy-text" type="button" data-text="https://lin.jx.cn/2026/11/10/devlog-robot-02/">复制</button></div><div class="post-copyright-detail">除特别声明外，本站作品均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议，转载请注明来自 <a href='/'>鹿角巷1017号街口</a></div><img class="post-copyright-icon noview" src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></div><div class="post-tail-tags"><a class="post-tail-tags-link" href="/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/" rel="tag">机器人</a></div><div class="post-nav"><a class="post-nav-prev" nopost=""></a><a class="post-nav-next" href="/2026/10/24/devlog-robot-01/" title="开发日志—机器人01—2026/10/24">下一篇<span>开发日志—机器人01—2026/10/24</span></a></div><div class="comment"><div class="giscus" style="min-height: 200px"></div><script>(() => {
+  const cfg = {"repo":"YinchuanLin/blog-comments","repo_id":"R_kgDOVVeYIQ","category":"Comments","category_id":"DIC_kwDOVVeYIc4DJeYS","mapping":"pathname","strict":"0","reactions_enabled":"1","emit_metadata":"0","input_position":"bottom","lang":"zh-CN"}
+  const container = document.querySelector('.comment .giscus')
+  if (!container || !cfg.repo || !cfg.repo_id || !cfg.category_id) return
+
+  // 与主题的深浅色开关保持同步（主题把模式存在 localStorage.color-mode 与 body[data-mode] 上）
+  const themeOf = () => document.body.getAttribute('data-mode') === 'dark' ? 'dark_dimmed' : 'light'
+
+  const syncTheme = () => {
+    const frame = document.querySelector('iframe.giscus-frame')
+    if (frame && frame.contentWindow) {
+      frame.contentWindow.postMessage({ giscus: { setConfig: { theme: themeOf() } } }, 'https://giscus.app')
+    }
+  }
+
+  const mount = () => {
+    if (document.querySelector('script[src^="https://giscus.app/client.js"]')) return
+    const s = document.createElement('script')
+    s.src = 'https://giscus.app/client.js'
+    s.async = true
+    s.crossOrigin = 'anonymous'
+    s.setAttribute('data-repo', cfg.repo)
+    s.setAttribute('data-repo-id', cfg.repo_id)
+    s.setAttribute('data-category', cfg.category)
+    s.setAttribute('data-category-id', cfg.category_id)
+    s.setAttribute('data-mapping', cfg.mapping)
+    s.setAttribute('data-strict', cfg.strict)
+    s.setAttribute('data-reactions-enabled', cfg.reactions_enabled)
+    s.setAttribute('data-emit-metadata', cfg.emit_metadata)
+    s.setAttribute('data-input-position', cfg.input_position)
+    s.setAttribute('data-theme', themeOf())
+    s.setAttribute('data-lang', cfg.lang)
+    container.appendChild(s)
+  }
+
+  new MutationObserver(syncTheme).observe(document.body, { attributes: true, attributeFilter: ['data-mode'] })
+
+  if (true && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        io.disconnect()
+        mount()
+      }
+    }, { rootMargin: '400px 0px' })
+    io.observe(container)
+  } else {
+    mount()
+  }
+})()</script></div></div><aside id="post-sidebar" status="show"><div id="toc-container"><div class="toc-title"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"><span>目录</span></div><div class="toc-content" id="toc-div"></div></div></aside></div></div><div id="toolbar" hide=""><div id="toolbar-setting-container" hide=""><div class="toolbar-item"><button id="tool-color-mode" title="深色模式" type="button"><img src="/assets/images/svg/ta/ta-moon.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button class="copy-text" id="tool-share" title="分享" type="button" data-text="https://lin.jx.cn/2026/11/10/devlog-robot-02/"><img src="/assets/images/svg/ta/ta-share.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-plus" title="放大字体" type="button"><img src="/assets/images/svg/ta/ta-text-plus.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-minus" title="缩小字体" type="button"><img src="/assets/images/svg/ta/ta-text-minus.svg" class="icon noview" alt="Icon"></button></div></div><div class="toolbar-container"><div class="toolbar-item"><button id="tool-setting" title="设置" type="button"><img src="/assets/images/svg/ta/ta-setting.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-toc" title="目录" type="button"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-gototop" title="返回顶部" type="button"><img src="/assets/images/svg/ta/ta-up.svg" class="icon noview" alt="Icon"></button></div></div></div><div class="search-overlay"><div class="search-container"><div class="search-header"><div class="search-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+搜索</div><div class="search-close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9a9 9 0 0 0 -9 9a9 9 0 0 0 9 9z" /><path d="M9 8l6 8" /><path d="M15 8l-6 8" /></svg></div></div><div class="search-input-box"><input id="search-input" type="search" placeholder="请输入关键词进行站内搜索……" value="" maxlength="80"/></div><div class="search-result-container"><div class="search-result-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg></div></div></div></div></main><footer><div class="footer"><div id="footer-copyright">© 2026 <span>💗</span> <a target="_blank" rel="noopener" href="https://github.com/YinchuanLin">Lin</a></div><div id="footer-info"><div id="footer-framework">🚀本站由 <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/chanwj/hexo-theme-meow" title="3.3.2" target="_blank">Meow</a> 强力驱动</div><div id="footer-runtime"><span id="runtime" data-startdate="2026-09-23T23:37:38.000Z">🌻已稳定运行.年.月.天</span></div></div><div id="footer-pageview"><div id="container_site_pv"><span>🔥总访问量</span><span id="vercount_value_site_pv"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6l0 -3" /><path d="M16.25 7.75l2.15 -2.15" /><path d="M18 12l3 0" /><path d="M16.25 16.25l2.15 2.15" /><path d="M12 18l0 3" /><path d="M7.75 16.25l-2.15 2.15" /><path d="M6 12l-3 0" /><path d="M7.75 7.75l-2.15 -2.15" /></svg></span></div><div id="container_site_uv"><span>🐈访客人数</span><span id="vercount_value_site_uv"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6l0 -3" /><path d="M16.25 7.75l2.15 -2.15" /><path d="M18 12l3 0" /><path d="M16.25 16.25l2.15 2.15" /><path d="M12 18l0 3" /><path d="M7.75 16.25l-2.15 2.15" /><path d="M6 12l-3 0" /><path d="M7.75 7.75l-2.15 -2.15" /></svg></span></div></div></div></footer><div class="scripts"><script>const GLOBALCONFIG = {
+  root: '/',
+  toolbar: true,
+  lazyload_src: '/assets/images/Meow-Loading.webp',
+  friends: false,
+  album: '',
+  codeblock: true,
+  code_copy_text: false,
+  share_text: '🐱Share From Meow',
+  onblur_title: '快回来吧～✧(´▽`ʃ♡ƪ)',
+  mouse_click: false,
+  notify:{
+    enable: false,
+    info: '复制成功～转载请标注本文地址',
+    f12_info: '开发者模式已打开，请遵循本站版权协议'
+  },
+  search: {
+    enable: true,
+    path: 'search.xml',
+    local: {
+      top_n_per_article: 1,
+      preload: false
+    }
+  },
+  encrypt: false,
+  category: false,
+};
+</script><script>if (!localStorage.getItem('color-mode')) {
+  localStorage.setItem('color-mode', 'light' || 'light');
+}
+document.body.setAttribute('data-mode', localStorage.getItem('color-mode'));
+</script>
+<script src="/js/theme/tools/utils.js"></script>
+
+<script src="/js/plugins/dist/lazyload.min.js"></script>
+
+<script src="/js/plugins/view-image.min.js"></script>
+<script src="https://events.vercount.one/js" defer="defer"></script><script>if (localStorage.getItem('font-size')) {
+  document.querySelector('.post').style.fontSize = localStorage.getItem('font-size') + 'px';
+}
+</script>
+<script src="/js/plugins/dist/search.js"></script>
+
+<script src="/js/main.js" type="module"></script>
+</div></body></html>
